@@ -917,6 +917,7 @@ MonoBehaviour:
   - {fileID: 5870382453912313932}
   - {fileID: 6369762339550743982}
   - {fileID: 7556514552514384526}
+  isBodyPlaced: 0
 --- !u!1 &961991545
 GameObject:
   m_ObjectHideFlags: 0

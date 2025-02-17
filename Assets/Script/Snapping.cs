@@ -21,8 +21,18 @@ public class Snapping : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, snapPoint.position) < snapRange)
         {
-            isPlaced = true;
-            SnapToPosition();
+            if(GetComponent<Identity>().identityName != "Body" && GameManager.GetInstance().isBodyPlaced == true)
+            {
+                isPlaced = true;
+                SnapToPosition();
+
+            }
+            else if(GetComponent<Identity>().identityName == "Body")
+            {
+                isPlaced = true;
+                SnapToPosition();
+            }
+          
         }
         else 
         {
@@ -39,7 +49,7 @@ public class Snapping : MonoBehaviour
         }
     }*/
 
-    void SnapToPosition()
+    public void SnapToPosition()
     {
        
         if (GetComponent<Identity>().identityName == "Body")
